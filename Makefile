@@ -16,3 +16,7 @@ report.html: report.Rmd output/baseline.rds output/newdata.rds \
 .PHONY:clean
 clean:
 	rm output/*
+	
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
